@@ -1,5 +1,5 @@
 # -*- coding: utf8 -*-
-import configure # configure.py is setting file of this program
+import configure # configure.py is setting file of this program, format refer to configure_fake.py
 import os
 import time
 import MySQLdb # install mysqlclient please
@@ -59,7 +59,7 @@ def write_xls(filename, content):
         row_num += 1
     book.save(filename)
 
-# envelopes can't send attache file containing chinese characters in name
+# envelopes can't send attache file containing chinese characters in name, so use send_mail function
 def send_mail_0(server='smtp.sina.com', user='yxxxxxxx@sina.com', password='xxxxxxx',
                 recipients='zsdsdfsdf@ssss.net',
                 subject="Test test",
